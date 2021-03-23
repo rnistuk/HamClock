@@ -37,10 +37,9 @@
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
     [df setTimeZone:[NSTimeZone localTimeZone]];
     [df setDateStyle:NSDateFormatterNoStyle];
-    [df setTimeStyle:NSDateFormatterShortStyle];
+    [df setDateFormat:@"HHmm"];
     
     [self.localTimeTextField setStringValue:[df stringFromDate:dateNow]];
-    
     
     [df setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
     [self.utcTimeTextField setStringValue:[df stringFromDate:dateNow]];
