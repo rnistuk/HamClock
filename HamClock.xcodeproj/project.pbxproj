@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022B77F6262CCDA0003B3E01 /* operators.csv in Resources */ = {isa = PBXBuildFile; fileRef = 022B77F5262CCDA0003B3E01 /* operators.csv */; };
 		025854042603C5FA00A28806 /* DSDisplayTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 025854032603C5FA00A28806 /* DSDisplayTimeView.m */; };
+		02597707262F7581005111C4 /* OperatorsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02597706262F7581005111C4 /* OperatorsManager.m */; };
+		029C75962627F8620045C9F2 /* OperatorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C75952627F8620045C9F2 /* OperatorsTableViewController.m */; };
 		02E57C2425EDE518000DE932 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E57C2325EDE518000DE932 /* AppDelegate.m */; };
 		02E57C2625EDE51A000DE932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02E57C2525EDE51A000DE932 /* Assets.xcassets */; };
 		02E57C2925EDE51A000DE932 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E57C2725EDE51A000DE932 /* MainMenu.xib */; };
@@ -19,8 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		022B77F5262CCDA0003B3E01 /* operators.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = operators.csv; sourceTree = "<group>"; };
 		025854022603C5FA00A28806 /* DSDisplayTimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDisplayTimeView.h; sourceTree = "<group>"; };
 		025854032603C5FA00A28806 /* DSDisplayTimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSDisplayTimeView.m; sourceTree = "<group>"; };
+		02597705262F7581005111C4 /* OperatorsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperatorsManager.h; sourceTree = "<group>"; };
+		02597706262F7581005111C4 /* OperatorsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperatorsManager.m; sourceTree = "<group>"; };
+		029C75942627F8620045C9F2 /* OperatorsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperatorsTableViewController.h; sourceTree = "<group>"; };
+		029C75952627F8620045C9F2 /* OperatorsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperatorsTableViewController.m; sourceTree = "<group>"; };
+		02A327C526364C8800B8B981 /* cleanOperators.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = cleanOperators.csv; sourceTree = "<group>"; };
 		02E57C1F25EDE518000DE932 /* HamClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HamClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E57C2225EDE518000DE932 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02E57C2325EDE518000DE932 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022B77F4262CCD66003B3E01 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		02597704262F637D005111C4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				02597705262F7581005111C4 /* OperatorsManager.h */,
+				02597706262F7581005111C4 /* OperatorsManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		02E57C1625EDE518000DE932 = {
 			isa = PBXGroup;
 			children = (
@@ -69,16 +94,15 @@
 		02E57C2125EDE518000DE932 /* HamClock */ = {
 			isa = PBXGroup;
 			children = (
+				022B77F4262CCD66003B3E01 /* data */,
 				02E57C3825F33761000DE932 /* src */,
-				02E57C2225EDE518000DE932 /* AppDelegate.h */,
-				02E57C2325EDE518000DE932 /* AppDelegate.m */,
 				02E57C2525EDE51A000DE932 /* Assets.xcassets */,
+				022B77F5262CCDA0003B3E01 /* operators.csv */,
 				02E57C2725EDE51A000DE932 /* MainMenu.xib */,
 				02E57C2A25EDE51A000DE932 /* Info.plist */,
 				02E57C2B25EDE51A000DE932 /* main.m */,
 				02E57C2D25EDE51A000DE932 /* HamClock.entitlements */,
-				02E57C3425EDE59C000DE932 /* ClockViewController.h */,
-				02E57C3525EDE59C000DE932 /* ClockViewController.m */,
+				02A327C526364C8800B8B981 /* cleanOperators.csv */,
 			);
 			path = HamClock;
 			sourceTree = "<group>";
@@ -86,12 +110,43 @@
 		02E57C3825F33761000DE932 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				02597704262F637D005111C4 /* Managers */,
+				02E8C4702609909800C75ACF /* controllers */,
+				02E8C46F2609908500C75ACF /* delegates */,
+				02E8C46E2609907300C75ACF /* views */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		02E8C46E2609907300C75ACF /* views */ = {
+			isa = PBXGroup;
+			children = (
 				02E57C3F25F337E9000DE932 /* DSClockView.h */,
 				02E57C4025F337E9000DE932 /* DSClockView.m */,
 				025854022603C5FA00A28806 /* DSDisplayTimeView.h */,
 				025854032603C5FA00A28806 /* DSDisplayTimeView.m */,
 			);
-			path = src;
+			path = views;
+			sourceTree = "<group>";
+		};
+		02E8C46F2609908500C75ACF /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				02E57C2225EDE518000DE932 /* AppDelegate.h */,
+				02E57C2325EDE518000DE932 /* AppDelegate.m */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		02E8C4702609909800C75ACF /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				02E57C3425EDE59C000DE932 /* ClockViewController.h */,
+				02E57C3525EDE59C000DE932 /* ClockViewController.m */,
+				029C75942627F8620045C9F2 /* OperatorsTableViewController.h */,
+				029C75952627F8620045C9F2 /* OperatorsTableViewController.m */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +207,7 @@
 			files = (
 				02E57C2625EDE51A000DE932 /* Assets.xcassets in Resources */,
 				02E57C2925EDE51A000DE932 /* MainMenu.xib in Resources */,
+				022B77F6262CCDA0003B3E01 /* operators.csv in Resources */,
 				5039212638DADBEE0C4C55B8 /* HamClock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,11 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E57C3625EDE59C000DE932 /* ClockViewController.m in Sources */,
+				029C75962627F8620045C9F2 /* OperatorsTableViewController.m in Sources */,
 				02E57C2C25EDE51A000DE932 /* main.m in Sources */,
 				02E57C4125F337E9000DE932 /* DSClockView.m in Sources */,
 				025854042603C5FA00A28806 /* DSDisplayTimeView.m in Sources */,
 				02E57C2425EDE518000DE932 /* AppDelegate.m in Sources */,
 				503927128ADB7EFE596974D9 /* readme.md in Sources */,
+				02597707262F7581005111C4 /* OperatorsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -290,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "data" : [
     {
+      "filename" : "operators.csv",
       "idiom" : "universal"
     }
   ],

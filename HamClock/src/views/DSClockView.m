@@ -41,11 +41,11 @@
     return NSMakePoint(origin.x + size.width / 2.0, origin.y + size.height / 2.0);
 }
 
--(void) drawHandAtAngle:(CGFloat)angle withLength:(CGFloat)length {
+-(void) drawHandAtAngle:(CGFloat)angle withLength:(CGFloat)length withWidth:(CGFloat)lineWidth {
     NSPoint center = [self centerOfViewBound];
     NSPoint handEnd = NSMakePoint(center.x + length * cos(-angle), center.y + length * sin(-angle));
     NSBezierPath *path = [NSBezierPath bezierPath];
-    [path setLineWidth:2];
+    [path setLineWidth:lineWidth];
     [path moveToPoint:center];
     [path lineToPoint:handEnd];
     [[NSColor greenColor] setStroke];
@@ -55,19 +55,19 @@
 -(void) drawSecondHand:(CGFloat)seconds {
     CGFloat length = 0.90 * MIN(self.bounds.size.width, self.bounds.size.height) / 2.0;
     CGFloat angle = (2.0 * M_PI * seconds / 60.0) - M_PI_2;
-    [self drawHandAtAngle:angle withLength:length];
+    [self drawHandAtAngle:angle withLength:length withWidth:2.0];
 }
 
 - (void) drawMinuteHand:(CGFloat)minutes {
     CGFloat length = 0.75 * MIN(self.bounds.size.width, self.bounds.size.height) / 2.0;
     CGFloat angle = (2.0 * M_PI * minutes / 60.0) - M_PI_2;
-    [self drawHandAtAngle:angle withLength:length];
+    [self drawHandAtAngle:angle withLength:length withWidth:3.0];
 }
 
 - (void) drawHourHand:(CGFloat)hours {
     CGFloat length = 0.50 * MIN(self.bounds.size.width, self.bounds.size.height) / 2.0;
     CGFloat angle = (2.0 * M_PI * hours / 12.0) - M_PI_2;
-    [self drawHandAtAngle:angle withLength:length];
+    [self drawHandAtAngle:angle withLength:length withWidth:5.0];
 }
 
 - (NSDateComponents*) localDateComponents:(NSDate*)now {

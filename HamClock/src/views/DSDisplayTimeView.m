@@ -23,14 +23,12 @@
     return YES;
 }
 
-
 - (void)updateLayer {
    self.layer.backgroundColor = [NSColor colorWithCalibratedRed:0.000f
                                                           green:0.000f
                                                            blue:0.000f
                                                           alpha:1.0].CGColor;
 }
-
 
 - (void) updateTime {
     NSDate* dateNow = [NSDate now];
@@ -46,11 +44,9 @@
     
 }
 
-
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
-    // Drawing code here.
 }
+
 
 @end

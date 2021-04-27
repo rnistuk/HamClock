@@ -1,10 +1,3 @@
-//
-//  ClockViewController.m
-//  HamClock
-//
-//  Created by Rich Nistuk on 2021-03-01.
-//
-
 #import "ClockViewController.h"
 
 @interface ClockViewController ()
@@ -15,7 +8,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+    NSLog(@"viewDidLoad");
+}
+
+- (IBAction)buttonPressed:(id)sender {
 }
 
 @end

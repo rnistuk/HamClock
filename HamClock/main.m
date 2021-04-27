@@ -1,15 +1,7 @@
-//
-//  main.m
-//  HamClock
-//
-//  Created by Rich Nistuk on 2021-03-01.
-//
-
 #import <Cocoa/Cocoa.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // Setup code that might create autoreleased objects goes here.
     }
     return NSApplicationMain(argc, argv);
 }

@@ -25,4 +25,7 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 
+## AppCode
+.idea/
+**/.DS_Store
 
