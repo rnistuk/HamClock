@@ -45,9 +45,7 @@ No versions yet.
 
 ## Authors
 
-* **Rich Nistuk** - *Initial work* - [rnistuk](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/rnistuk) 
+* **Rich Nistuk** - *Initial work*
 
 ## License
 
